@@ -45,7 +45,7 @@ public class AddDateActivity extends Activity {
     }
 
     public void onSave(View view) {
-
+    /*Package date data to be sent to AddTaskActivity*/
         Intent intent = getIntent();
 
         intent.putExtra("date", date);
