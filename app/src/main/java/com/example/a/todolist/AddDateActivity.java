@@ -42,6 +42,7 @@ public class AddDateActivity extends Activity {
         month = datePicker.getMonth() + 1;
         day = datePicker.getDayOfMonth();
 
+        /*Algorithm to get month string from month number*/
         switch(month){
             case 1:
                 m = "Jan";
@@ -93,6 +94,7 @@ public class AddDateActivity extends Activity {
 
         }
 
+        /*Concatenate date*/
         date = m + " " + day + ", " + year;
 
         intent.putExtra("date", date);
