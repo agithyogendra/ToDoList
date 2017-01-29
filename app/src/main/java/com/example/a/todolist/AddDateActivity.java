@@ -32,6 +32,7 @@ public class AddDateActivity extends Activity {
         year = cal.get(Calendar.YEAR);
         month = cal.get(Calendar.MONTH);
         day = cal.get(Calendar.DAY_OF_MONTH);
+        /*create date String*/
         date = day + "/" + month + 1 + "/" + year;
         datePicker.updateDate(year, month, day);
 
