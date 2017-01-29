@@ -29,9 +29,9 @@ public class TimeTrackerAdapter extends CursorAdapter {
     }
 
     @Override
-    //Display the values in the selected row
+    //The adapter handles all cursor iteration for you, you just need to display the values in the selected row
     public void bindView(View view, Context context, Cursor cursor) {
-        //The time, date and notes fields are retrieved and populated with data from getString calls to cursor
+        //The time and notes fields are both retrieved and populated with data from getString calls to cursor
         TextView timeTextView = (TextView) view.findViewById(R.id.time_view);
         timeTextView.setText(cursor.getString(1));
 

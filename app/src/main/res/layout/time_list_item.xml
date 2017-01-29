@@ -12,7 +12,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="18dp"
-        android:textColor="#2B2B2B"
+        android:textColor="#E9E581"
         android:paddingBottom="10dp"
         android:fontFamily="monospace"
         android:gravity="left"/>
@@ -22,7 +22,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="18dp"
-        android:textColor="#2B2B2B"
+        android:textColor="#DE1B1B"
         android:paddingBottom="10dp"
         android:fontFamily="monospace"
         android:gravity="right"/>

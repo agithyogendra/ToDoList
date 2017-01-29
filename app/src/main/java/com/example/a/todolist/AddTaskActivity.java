@@ -50,7 +50,7 @@ public class AddTaskActivity extends Activity {
     }
 
     public void onSave(View view) {
-    /*Package time, date, and note data to be sent to main*/
+
         Intent intent = getIntent();
 
         intent.putExtra("time",time);
@@ -69,21 +69,19 @@ public class AddTaskActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        //Retrieve Time data from AddTimeActivity
+        //Save Time
         if (requestCode == TIME_ENTRY_REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
                 time = data.getStringExtra("time");
-                /*Set button text*/
                 add_time = (Button)findViewById(R.id.add_time);
                 add_time.setText(time);
             }
         }
 
-        //Retrieve Time data from AddTimeActivity
+        //Save Date
         if (requestCode == TIME_ENTRY_REQUEST_CODE2) {
             if (resultCode == RESULT_OK) {
                 date = data.getStringExtra("date");
-                /*Set button text*/
                 add_date = (Button)findViewById(R.id.add_date);
                 add_date.setText(date);
             }
