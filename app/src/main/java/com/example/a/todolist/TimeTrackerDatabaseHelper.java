@@ -77,10 +77,6 @@ public class TimeTrackerDatabaseHelper extends Activity{
             );
         }
 
-        /*You updated the database version which will drop and recreate the database, destroying all
-        of the stored data. If you found this on a production system with real users and real data, this
-        is when you would override onUpgrade to mitigate the information from the old database format to
-        the new one.*/
         public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
             database.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
             onCreate(database);
