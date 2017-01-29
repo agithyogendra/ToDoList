@@ -34,7 +34,7 @@ public class AddTimeActivity extends Activity {
         int selected_minute = time_picker.getCurrentMinute();
         String AM_PM = "";
         String time;
-
+        /*Algorithm to determine whether input is in AM or PM*/
         if (selected_hour > 12) {
             AM_PM = "PM";
             selected_hour = selected_hour - 12;
@@ -47,10 +47,11 @@ public class AddTimeActivity extends Activity {
                 selected_hour = 12;
             }
         }
-
+        /*Format time*/
         String hour = (String) ((selected_hour < 10) ? "0" + selected_hour : String.valueOf(selected_hour));
         String minute = (String) ((selected_minute < 10) ? "0" + selected_minute : String.valueOf(selected_minute));
         time = hour + " : " + minute + " " + AM_PM;
+        /*Package time data to be sent to AddTaskActivity*/
         intent.putExtra("time", time);
 
         this.setResult(RESULT_OK, intent);
